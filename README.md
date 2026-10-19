@@ -59,3 +59,9 @@ O projeto inclui agora um **modelo independente inspirado no SPI**, implementado
 - [Documentação e execução](docs/simulador_2026.md)
 
 Os dados dos confrontos não foram inventados. Antes de executar a projeção de 2026, é necessário criar o arquivo `data/brasileirao_2026/fixtures_2026-10-18.csv` com todos os jogos restantes verificados em fonte oficial. Rode os testes com `python -m unittest discover -s tests -v`.
+
+## Calibração por partida (xG e validação temporal)
+
+Novo módulo [src/calibration.py](src/calibration.py): regressão Poisson com forças ofensivas/defensivas por clube, mando de campo, peso temporal de jogos e xG opcional. O backtest usa cortes por dia para impedir informação futura nas previsões. Consulte [docs/calibracao_temporal.md](docs/calibracao_temporal.md) para o formato do CSV, exemplos e comandos. A integração com o simulador usa `--calibrated-model`.
+
+**Estado dos dados:** ainda não há histórico verificado de jogos e xG do Brasileirão 2026 no repositório. Nenhuma probabilidade recalibrada foi publicada; testes sintéticos não são uma validação empírica de desempenho preditivo.
