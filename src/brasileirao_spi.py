@@ -181,6 +181,53 @@ def simulate(clubs, fixtures, runs=100_000, seed=42, shrink=8.0,
     )
 
 
+
+def simulate_calibrated(clubs, fixtures, model, runs=100_000, seed=42):
+    """Simula temporada usando lambdas ajustados pelo histórico jogo a jogo."""
+    from src.calibration import forecast
+    if runs <= 0:
+        raise ValueError("runs deve ser positivo")
+    validate_schedule(clubs, fixtures)
+    fixtures_lambda = [(h, a, *forecast(model, h, a)[:2]) for h, a in fixtures]
+    rng = random.Random(seed)
+    counts = {t: {"title": 0, "relegation": 0, "top4": 0,
+                  "points": 0, "position": 0} for t in clubs}
+    for _ in range(runs):
+        state = {t: dict(stats) for t, stats in clubs.items()}
+        for h, a, lh, la in fixtures_lambda:
+            gh, ga = poisson(rng, lh), poisson(rng, la)
+            x, y = state[h], state[a]
+            x["gf"] += gh
+            x["ga"] += ga
+            y["gf"] += ga
+            y["ga"] += gh
+            if gh > ga:
+                x["wins"] += 1
+                x["points"] += 3
+            elif gh < ga:
+                y["wins"] += 1
+                y["points"] += 3
+            else:
+                x["points"] += 1
+                y["points"] += 1
+        order = list(state)
+        rng.shuffle(order)
+        order.sort(key=lambda t: rank(state[t]), reverse=True)
+        for i, team in enumerate(order):
+            c = counts[team]
+            c["title"] += i == 0
+            c["relegation"] += i >= 16
+            c["top4"] += i < 4
+            c["points"] += state[team]["points"]
+            c["position"] += i+1
+    return sorted(({"team": t, "title_probability": c["title"]/runs,
+                    "relegation_probability": c["relegation"]/runs,
+                    "top4_probability": c["top4"]/runs,
+                    "expected_points": c["points"]/runs,
+                    "expected_position": c["position"]/runs}
+                   for t,c in counts.items()), key=lambda d: d["expected_position"])
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Monte Carlo Brasileirão 2026 — SPI aproximado")
     parser.add_argument("--standings", required=True, type=Path)
@@ -190,16 +237,29 @@ def main(argv=None):
     parser.add_argument("--output", type=Path, default=Path("results/probabilities.csv"))
     parser.add_argument("--metadata", type=Path, default=Path("results/metadata.json"))
     parser.add_argument("--as-of", required=True, help="Data-base YYYY-MM-DD")
+    parser.add_argument("--calibrated-model", type=Path, help="JSON gerado por src.calibration; anterior à data-base")
     args = parser.parse_args(argv)
     clubs = read_standings(args.standings)
     fixtures = read_fixtures(args.fixtures, clubs)
-    result = simulate(clubs, fixtures, args.runs, args.seed)
+    if args.calibrated_model:
+        from datetime import date
+        from src.calibration import forecast
+        payload = json.loads(args.calibrated_model.read_text(encoding="utf-8"))
+        if date.fromisoformat(payload["cutoff"]) > date.fromisoformat(args.as_of):
+            raise ValueError("Modelo posterior à data-base: risco de vazamento temporal")
+        model = payload["model"]
+        missing = set(clubs) - set(model["attack"])
+        if missing:
+            raise ValueError(f"Modelo sem histórico para clubes: {sorted(missing)}")
+        result = simulate_calibrated(clubs, fixtures, model, args.runs, args.seed)
+    else:
+        result = simulate(clubs, fixtures, args.runs, args.seed)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=list(result[0]))
         writer.writeheader()
         writer.writerows(result)
-    meta = {"as_of": args.as_of, "standings": str(args.standings),
+    meta = {"as_of": args.as_of, "calibrated_model": str(args.calibrated_model) if args.calibrated_model else None, "standings": str(args.standings),
             "fixtures": str(args.fixtures), "runs": args.runs, "seed": args.seed,
             "model": "SPI-inspired Poisson independent-goals, shrink=8, home=1.246, away=0.803",
             "caveat": "Não é um modelo oficial FiveThirtyEight; ratings não se atualizam jogo a jogo."}
