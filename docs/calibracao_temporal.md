@@ -24,7 +24,7 @@ python -m src.brasileirao_spi --standings data/brasileirao_2026/standings_2026-1
 python -m unittest discover -s tests -v
 ```
 
-**Atenção à data-base:** para prever ao fim de 18/10/2026, o parâmetro `--cutoff` deve ser `2026-10-19` (exclusivo), cobrindo partidas jogadas até 18/10. O CLI do simulador permite modelos cuja data de corte seja no máximo igual à data-base; para um corte exclusivo no dia seguinte, esta verificação deve ser ajustada para confirmar que a última partida do treino não excede a data-base. Até isso ser feito, não usar a integração automática para o corte do dia seguinte.
+**Atenção à data-base:** para prever ao fim de 18/10/2026, o parâmetro `--cutoff` deve ser `2026-10-19` (exclusivo), cobrindo partidas jogadas até 18/10. O simulador aceita a data de corte exclusiva até o dia seguinte à data-base, para incluir o dia da classificação. Antes de uso real, confirme também que o CSV só contenha partidas disputadas até essa data.
 
 O programa usa regressão Poisson log-linear com:
 - `log(lambda_home) = mu + mando + ataque_home - defesa_away`
