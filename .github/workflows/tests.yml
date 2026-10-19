@@ -11,7 +11,25 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Instalar NumPy
+        run: python -m pip install 'numpy>=1.26,<3'
       - name: Testes e validacao sintatica
         run: |
           python -m compileall -q src tests
           python -m unittest discover -s tests -v
+      - name: Reproduzir 200 mil simulacoes de 18-10-2026
+        run: |
+          python -m src.simulate_numpy --standings data/brasileirao_2026/standings_2026-10-18.csv --fixtures data/brasileirao_2026/fixtures_2026-10-18.csv --runs 200000 --seed 42 --output results/reproduced.csv
+          python - <<'PY'
+          import csv
+          paths=['results/brasileirao_2026/probabilities_2026-10-18.csv','results/reproduced.csv']
+          tables=[]
+          for path in paths:
+              with open(path, encoding='utf-8', newline='') as f:
+                  tables.append({r['team']:r for r in csv.DictReader(f)})
+          assert tables[0].keys()==tables[1].keys()
+          for team in tables[0]:
+              for key in tables[0][team]:
+                  if key != 'team':
+                      assert abs(float(tables[0][team][key])-float(tables[1][team][key])) < 1e-10, (team,key)
+          PY
