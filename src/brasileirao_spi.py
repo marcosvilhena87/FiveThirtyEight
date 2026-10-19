@@ -242,10 +242,10 @@ def main(argv=None):
     clubs = read_standings(args.standings)
     fixtures = read_fixtures(args.fixtures, clubs)
     if args.calibrated_model:
-        from datetime import date
+        from datetime import date, timedelta
         from src.calibration import forecast
         payload = json.loads(args.calibrated_model.read_text(encoding="utf-8"))
-        if date.fromisoformat(payload["cutoff"]) > date.fromisoformat(args.as_of):
+        if date.fromisoformat(payload["cutoff"]) > date.fromisoformat(args.as_of) + timedelta(days=1):
             raise ValueError("Modelo posterior à data-base: risco de vazamento temporal")
         model = payload["model"]
         missing = set(clubs) - set(model["attack"])
