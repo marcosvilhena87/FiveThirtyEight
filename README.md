@@ -65,3 +65,20 @@ Os dados dos confrontos não foram inventados. Antes de executar a projeção de
 Novo módulo [src/calibration.py](src/calibration.py): regressão Poisson com forças ofensivas/defensivas por clube, mando de campo, peso temporal de jogos e xG opcional. O backtest usa cortes por dia para impedir informação futura nas previsões. Consulte [docs/calibracao_temporal.md](docs/calibracao_temporal.md) para o formato do CSV, exemplos e comandos. A integração com o simulador usa `--calibrated-model`.
 
 **Estado dos dados:** ainda não há histórico verificado de jogos e xG do Brasileirão 2026 no repositório. Nenhuma probabilidade recalibrada foi publicada; testes sintéticos não são uma validação empírica de desempenho preditivo.
+
+## Brasileirão 2026 — cenário auditável em 18/10/2026
+
+- [72 confrontos pendentes, mando, data e fonte](data/brasileirao_2026/fixtures_2026-10-18.csv).
+- [Probabilidades de 200.000 simulações](results/brasileirao_2026/probabilities_2026-10-18.csv).
+- [Metadados / ressalvas](results/brasileirao_2026/metadata_2026-10-18.json).
+- [Simulador vetorizado reproduzível](src/simulate_numpy.py).
+- [Testes de auditoria](tests/test_fixture_audit.py).
+- [GitHub Actions](.github/workflows/tests.yml) reproduz as 200 mil simulações com NumPy, compara CSVs e verifica a integridade do calendário.
+
+```bash
+python -m pip install "numpy>=1.26,<3"
+python -m unittest discover -s tests -v
+python -m src.simulate_numpy --standings data/brasileirao_2026/standings_2026-10-18.csv --fixtures data/brasileirao_2026/fixtures_2026-10-18.csv --runs 200000 --seed 42 --output results/reproduced.csv
+```
+
+**Proveniência:** partidas de 31 a 34 obtidas da tabela detalhada divulgada pelo ge; mandos de 35 a 38 da tabela básica publicada pela Band a partir da CBF (datas dessas rodadas são **provisórias**, ainda não desmembradas); o jogo adiado Chapecoense x Vasco permanece **sem data definida** no registro da CBF. A classificação de entrada é transcrição da data-base e ainda carece de auditoria oficial partida a partida. A contagem e a unicidade de 72 pendências foram verificadas, com 38 jogos totais por clube. Os percentuais publicados usam **Poisson regularizado sobre gols acumulados, não ratings xG calibrados**; a rotina calibrada só deve ser utilizada quando a base jogo a jogo tiver sido validada.
