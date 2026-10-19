@@ -46,3 +46,16 @@ Nenhum resultado do SPI histórico deve ser apresentado como probabilidade atual
 A documentação oficial do FiveThirtyEight indica, salvo nota contrária, **CC BY 4.0 para datasets** e **MIT para código**. Atribuir a fonte e revisar a licença específica antes de redistribuir arquivos de terceiros.
 
 Este repositório é um projeto de pesquisa independente, sem afiliação com o FiveThirtyEight.
+
+## Simulador do Brasileirão 2026
+
+O projeto inclui agora um **modelo independente inspirado no SPI**, implementado em Python, com gols esperados e simulações Monte Carlo. O simulador exige tabela e calendário restante completos e auditados: **não é possível gerar projeções confiáveis apenas com a classificação**.
+
+- Código: [src/brasileirao_spi.py](src/brasileirao_spi.py)
+- Testes: [tests/test_simulator.py](tests/test_simulator.py)
+- CI: [.github/workflows/tests.yml](.github/workflows/tests.yml)
+- Classificação provisória (18/10): [data/brasileirao_2026/standings_2026-10-18.csv](data/brasileirao_2026/standings_2026-10-18.csv)
+- Formato para os confrontos: [data/brasileirao_2026/fixtures_template.csv](data/brasileirao_2026/fixtures_template.csv)
+- [Documentação e execução](docs/simulador_2026.md)
+
+Os dados dos confrontos não foram inventados. Antes de executar a projeção de 2026, é necessário criar o arquivo `data/brasileirao_2026/fixtures_2026-10-18.csv` com todos os jogos restantes verificados em fonte oficial. Rode os testes com `python -m unittest discover -s tests -v`.
