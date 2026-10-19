@@ -1,0 +1,12 @@
+{
+  "as_of": "2026-10-18",
+  "runs": 200000,
+  "seed": 42,
+  "fixtures": 72,
+  "engine": "numpy PCG64 (np.random.default_rng)",
+  "model": "independent Poisson, shrink=8, home=1.246, away=0.803, not xG-calibrated",
+  "date_policy": "rounds 32-34 confirmed by ge detailed, 35-38 nominal calendar not confirmed as detailed, round 21 unknown date",
+  "source_fixtures": "data/brasileirao_2026/fixtures_2026-10-18.csv",
+  "standings": "data/brasileirao_2026/standings_2026-10-18.csv",
+  "limitations": "Simulador anterior em src/brasileirao_spi.py utiliza gerador random.Random e produz variação Monte Carlo; resultados deste CSV são provenientes de simulação vetorizada com numpy. Pontuações da data-base ainda requerem verificação com CBF."
+}
