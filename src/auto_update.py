@@ -104,7 +104,6 @@ def run(matches, *, runs=200000, seed=42, dry_run=False):
     validate_schedule(prev, [(r["home"], r["away"]) for r in fixtures])
     # Every final recognized by the provider must appear in the frozen pending schedule.
     # Do not publish if provider has incomplete or inconsistent league coverage.
-    result = simulate_numpy(prev, [(r["home"], r["away"]) for r in fixtures], runs=runs, seed=seed)
     as_of = datetime.now(timezone.utc).date().isoformat()
     base = BASE / f"standings_{as_of}.csv"
     fixture_path = BASE / f"fixtures_{as_of}.csv"
@@ -115,6 +114,7 @@ def run(matches, *, runs=200000, seed=42, dry_run=False):
     if dry_run:
         print(f"DRY RUN: {len(finalized)} finais novos, {len(fixtures)} jogos pendentes")
         return True
+    result = simulate_numpy(prev, [(r["home"], r["away"]) for r in fixtures], runs=runs, seed=seed)
     standings_rows = [{"team": team, **{k: s[k] for k in
                       ("played", "wins", "draws", "losses", "gf", "ga")}}
                       for team, s in prev.items()]
