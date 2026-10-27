@@ -1,0 +1,62 @@
+round,date,home,away,date_status,source
+33,2026-10-28,Fluminense,Internacional,detalhada,https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/09/27/cbf-desmembra-rodadas-do-brasileirao-com-duas-semanas-completas-de-jogos-veja-as-datas.ghtml
+33,2026-10-28,Santos,Palmeiras,detalhada,https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/09/27/cbf-desmembra-rodadas-do-brasileirao-com-duas-semanas-completas-de-jogos-veja-as-datas.ghtml
+33,2026-10-28,Bragantino,Chapecoense,detalhada,https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/09/27/cbf-desmembra-rodadas-do-brasileirao-com-duas-semanas-completas-de-jogos-veja-as-datas.ghtml
+33,2026-10-28,Bahia,São Paulo,detalhada,https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/09/27/cbf-desmembra-rodadas-do-brasileirao-com-duas-semanas-completas-de-jogos-veja-as-datas.ghtml
+33,2026-10-28,Remo,Botafogo,detalhada,https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/09/27/cbf-desmembra-rodadas-do-brasileirao-com-duas-semanas-completas-de-jogos-veja-as-datas.ghtml
+33,2026-10-29,Atlético-MG,Cruzeiro,detalhada,https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/09/27/cbf-desmembra-rodadas-do-brasileirao-com-duas-semanas-completas-de-jogos-veja-as-datas.ghtml
+33,2026-10-29,Coritiba,Vitória,detalhada,https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/09/27/cbf-desmembra-rodadas-do-brasileirao-com-duas-semanas-completas-de-jogos-veja-as-datas.ghtml
+33,2026-10-29,Vasco,Flamengo,detalhada,https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/09/27/cbf-desmembra-rodadas-do-brasileirao-com-duas-semanas-completas-de-jogos-veja-as-datas.ghtml
+33,2026-10-29,Grêmio,Athletico-PR,detalhada,https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/09/27/cbf-desmembra-rodadas-do-brasileirao-com-duas-semanas-completas-de-jogos-veja-as-datas.ghtml
+33,2026-10-30,Corinthians,Mirassol,detalhada,https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/09/27/cbf-desmembra-rodadas-do-brasileirao-com-duas-semanas-completas-de-jogos-veja-as-datas.ghtml
+34,2026-11-02,Bragantino,Santos,detalhada,https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/09/27/cbf-desmembra-rodadas-do-brasileirao-com-duas-semanas-completas-de-jogos-veja-as-datas.ghtml
+34,2026-11-03,Chapecoense,Mirassol,detalhada,https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/09/27/cbf-desmembra-rodadas-do-brasileirao-com-duas-semanas-completas-de-jogos-veja-as-datas.ghtml
+34,2026-11-03,Internacional,Coritiba,detalhada,https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/09/27/cbf-desmembra-rodadas-do-brasileirao-com-duas-semanas-completas-de-jogos-veja-as-datas.ghtml
+34,2026-11-04,Flamengo,Grêmio,detalhada,https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/09/27/cbf-desmembra-rodadas-do-brasileirao-com-duas-semanas-completas-de-jogos-veja-as-datas.ghtml
+34,2026-11-04,Athletico-PR,Vasco,detalhada,https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/09/27/cbf-desmembra-rodadas-do-brasileirao-com-duas-semanas-completas-de-jogos-veja-as-datas.ghtml
+34,2026-11-04,Botafogo,Atlético-MG,detalhada,https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/09/27/cbf-desmembra-rodadas-do-brasileirao-com-duas-semanas-completas-de-jogos-veja-as-datas.ghtml
+34,2026-11-04,São Paulo,Corinthians,detalhada,https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/09/27/cbf-desmembra-rodadas-do-brasileirao-com-duas-semanas-completas-de-jogos-veja-as-datas.ghtml
+34,2026-11-05,Palmeiras,Remo,detalhada,https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/09/27/cbf-desmembra-rodadas-do-brasileirao-com-duas-semanas-completas-de-jogos-veja-as-datas.ghtml
+34,2026-11-05,Cruzeiro,Bahia,detalhada,https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/09/27/cbf-desmembra-rodadas-do-brasileirao-com-duas-semanas-completas-de-jogos-veja-as-datas.ghtml
+34,2026-11-06,Vitória,Fluminense,detalhada,https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/09/27/cbf-desmembra-rodadas-do-brasileirao-com-duas-semanas-completas-de-jogos-veja-as-datas.ghtml
+35,2026-11-18,Corinthians,Botafogo,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+35,2026-11-18,Coritiba,Santos,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+35,2026-11-18,Cruzeiro,Palmeiras,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+35,2026-11-18,Flamengo,Athletico-PR,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+35,2026-11-18,Grêmio,Bahia,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+35,2026-11-18,Mirassol,Atlético-MG,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+35,2026-11-18,Remo,Chapecoense,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+35,2026-11-18,São Paulo,Fluminense,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+35,2026-11-18,Vasco,Internacional,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+35,2026-11-18,Vitória,Bragantino,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+36,2026-11-22,Atlético-MG,Corinthians,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+36,2026-11-22,Athletico-PR,Remo,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+36,2026-11-22,Bahia,Coritiba,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+36,2026-11-22,Botafogo,São Paulo,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+36,2026-11-22,Chapecoense,Cruzeiro,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+36,2026-11-22,Fluminense,Mirassol,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+36,2026-11-22,Internacional,Vitória,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+36,2026-11-22,Palmeiras,Flamengo,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+36,2026-11-22,Bragantino,Vasco,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+36,2026-11-22,Santos,Grêmio,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+37,2026-11-29,Atlético-MG,Vasco,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+37,2026-11-29,Botafogo,Bahia,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+37,2026-11-29,Chapecoense,Palmeiras,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+37,2026-11-29,Corinthians,Grêmio,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+37,2026-11-29,Coritiba,Flamengo,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+37,2026-11-29,Fluminense,Cruzeiro,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+37,2026-11-29,Internacional,Bragantino,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+37,2026-11-29,Mirassol,Athletico-PR,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+37,2026-11-29,São Paulo,Remo,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+37,2026-11-29,Vitória,Santos,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+38,2026-12-02,Athletico-PR,São Paulo,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+38,2026-12-02,Cruzeiro,Internacional,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+38,2026-12-02,Flamengo,Chapecoense,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+38,2026-12-02,Grêmio,Mirassol,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+38,2026-12-02,Palmeiras,Coritiba,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+38,2026-12-02,Bragantino,Fluminense,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+38,2026-12-02,Remo,Corinthians,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+38,2026-12-02,Santos,Botafogo,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+38,2026-12-02,Vasco,Vitória,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+38,2026-12-02,Bahia,Atlético-MG,data_basica_nao_confirmada,https://www.band.com.br/esportes/futebol/veja-tabela-de-jogos-das-38-rodadas-do-brasileirao-2026
+21,,Chapecoense,Vasco,data_a_definir,https://www.cbf.com.br/futebol-brasileiro/jogos/campeonato-brasileiro/serie-a/2026/chapecoense-x-vasco-da-gama-saf/832099
