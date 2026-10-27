@@ -1,0 +1,85 @@
+{
+  "as_of": "2026-10-26",
+  "runs": 200000,
+  "seed": 42,
+  "fixtures": 61,
+  "completed_since_previous_snapshot": [
+    {
+      "home": "Corinthians",
+      "away": "Vitória",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "home": "Cruzeiro",
+      "away": "Remo",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "home": "Mirassol",
+      "away": "São Paulo",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "home": "Internacional",
+      "away": "Botafogo",
+      "home_goals": 3,
+      "away_goals": 0
+    },
+    {
+      "home": "Vitória",
+      "away": "Athletico-PR",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "home": "Vasco",
+      "away": "Corinthians",
+      "home_goals": 3,
+      "away_goals": 2
+    },
+    {
+      "home": "Palmeiras",
+      "away": "Bragantino",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "home": "Chapecoense",
+      "away": "Fluminense",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "home": "Santos",
+      "away": "Bahia",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "home": "Coritiba",
+      "away": "Grêmio",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "home": "Flamengo",
+      "away": "Atlético-MG",
+      "home_goals": 3,
+      "away_goals": 2
+    }
+  ],
+  "engine": "numpy PCG64 (np.random.default_rng)",
+  "model": "independent Poisson, shrink=8, home=1.246, away=0.803, not xG-calibrated",
+  "standings": "data/brasileirao_2026/standings_2026-10-26.csv",
+  "source_fixtures": "data/brasileirao_2026/fixtures_2026-10-26.csv",
+  "previous_snapshot": "2026-10-18",
+  "limitations": "Data-base anterior provisória. Datas das rodadas 35 a 38 não confirmadas; o confronto Chapecoense x Vasco segue sem data. Modelo não calibrado por xG; projeções experimentais.",
+  "sources": [
+    "https://ge.globo.com/futebol/brasileirao-serie-a/",
+    "https://www.cbf.com.br/futebol-brasileiro/jogos/campeonato-brasileiro/serie-a/2026",
+    "https://github.com/marcosvilhena87/FiveThirtyEight"
+  ]
+}
