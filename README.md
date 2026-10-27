@@ -82,3 +82,19 @@ python -m src.simulate_numpy --standings data/brasileirao_2026/standings_2026-10
 ```
 
 **Proveniência:** partidas de 31 a 34 obtidas da tabela detalhada divulgada pelo ge; mandos de 35 a 38 da tabela básica publicada pela Band a partir da CBF (datas dessas rodadas são **provisórias**, ainda não desmembradas); o jogo adiado Chapecoense x Vasco permanece **sem data definida** no registro da CBF. A classificação de entrada é transcrição da data-base e ainda carece de auditoria oficial partida a partida. A contagem e a unicidade de 72 pendências foram verificadas, com 38 jogos totais por clube. Os percentuais publicados usam **Poisson regularizado sobre gols acumulados, não ratings xG calibrados**; a rotina calibrada só deve ser utilizada quando a base jogo a jogo tiver sido validada.
+
+## Brasileirão 2026 — atualização em 26/10/2026
+
+- [Classificação atualizada](data/brasileirao_2026/standings_2026-10-26.csv), após 11 resultados incorporados desde 18/10.
+- [61 confrontos pendentes](data/brasileirao_2026/fixtures_2026-10-26.csv), com mandos e observações de datas herdados da base anterior.
+- [Probabilidades (200.000 simulações)](results/brasileirao_2026/probabilities_2026-10-26.csv).
+- [Comparação por clube entre 18/10 e 26/10](results/brasileirao_2026/comparison_2026-10-18_vs_2026-10-26.csv).
+- [Metadados e resultados incorporados](results/brasileirao_2026/metadata_2026-10-26.json).
+
+Reprodução com o mesmo motor e parâmetros do cenário anterior:
+
+```bash
+python -m src.simulate_numpy --standings data/brasileirao_2026/standings_2026-10-26.csv --fixtures data/brasileirao_2026/fixtures_2026-10-26.csv --runs 200000 --seed 42 --output results/reproduced_2026-10-26.csv
+```
+
+**Limitações:** números experimentais, não previsões oficiais do FiveThirtyEight; classificação de partida original provisória, rodadas 35–38 com datas tentativas e gols esperados sem calibração xG.
